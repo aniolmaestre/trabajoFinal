@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick y Morty API</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="titulo">
+            <a href="./index.html"><img src="./Fotos/logoAPI.png"></img></a>
+        </div>
+        <nav id="botonesnav">
+            <a href="./index.html">HOME</a>
+            <a href="./aboutUs.html">ABOUT US</a>
+            <a href="./api.html">API</a>
+        </nav>
+    </header>
+    <main>
+        <main>
+            <!--Ahora se introducen las CARDS responsivas-->
+            <div id="esquema" class="row row-cols-md-3 row-cols-sm-2 row-cols-1 g-8 p-20 d-flex justify-content-around">
+                <div class="col">
+                    <div class="card1">
+                        <img src="./Fotos/rick.png" class="card-img-top" alt="Aniol Maestre" />
+                        <div class="card-body">
+                        <h5 class="card-title">Aniol Maestre</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Estudios" data-bs-content="Estudios de diseño 3D">Ámbito de estudio</button>
+                        <p class="card-text">
+                            <p>Nacio en 1997, Girona.</p>
+                            <p>Le gusta encontrar errores</p>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card1">
+                        <img src="./Fotos/rick.png" class="card-img-top" alt="Eric Portero" />
+                        <div class="card-body">
+                        <h5 class="card-title">Eric Portero</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Estudios" data-bs-content="Estudios en Robotica">Ámbito de estudio</button>
+                        <p class="card-text">
+                        <p>Nacio en el 2004, Barcelona</p>
+                        <p>Sabe encontrar errores de forma rapida en testeos</p>
+                    </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card1">
+                        <img src="./Fotos/rick.png" class="card-img-top" alt="Joan Torne" />
+                        <div class="card-body">
+                        <h5 class="card-title">Joan Torne</h5>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Estudios" data-bs-content="Estudios en Microinformática y redes">Ámbito de estudio</button>
+                        <p class="card-text">
+                            <p>Nacio en el 2000, Bogota</p>
+                            <p>Le gusta programar el estilo en CSS</p>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="d-flex">
+            <ul class="padi pagination mx-auto">
+              <li class="page-item"><a class="page-link" href="./index.html"><---</a></li>
+              <li class="page-item"><a class="page-link" href="./index.html">HOME</a></li>
+              <li class="page-item active"><a class="page-link" href="./aboutUs.html">ABOUT US</a></li>
+              <li class="page-item"><a class="page-link" href="./api.html">API</a></li>
+              <li class="page-item"><a class="page-link" href="./api.html">---></a></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Aqui esta el script para que funcione y se activen los Popovers con Bootstrap-->
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+
+<footer>
+    <div class="container-fluid bg-dark text-white d-flex rounded justify-content-around align-items-center">
+        <h1>Rick & Morty <span class="badge text-dark bg-warning rounded-pill">WEB</span></h1>
+        <nav id="footerNav1">
+            <ul class="nav">
+                <li class="nav-item">
+                <a class="nav-link text-info">Hecho con:</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-info">HTML <i class="fa-brands fa-html5"></i></a>
+                <a class="nav-link text-info">CSS <i class="fa-brands fa-css3-alt"></i></a>
+                <a class="nav-link text-info">JS <i class="fa-brands fa-square-js"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <div class="spinner-grow text-primary"></div>
+            <div class="spinner-grow text-success"></div>
+            <div class="spinner-grow text-warning"></div>
+            <div class="spinner-grow text-danger"></div>
+            <div class="spinner-grow text-light"></div>
+        </div>
+        <nav id="footerNav2">
+            <ul class="nav">
+                <li class="nav-item">
+                <p class="nav-link text-warning">Hecho por:</p>
+                </li>
+                <li class="nav-item">
+                <span class="nav-link text-warning p-0">Aniol Maestre</span>
+                <span class="nav-link text-warning p-0">Eric Portero</span>
+                <span class="nav-link text-warning p-0">Joan Torne</span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+    
+</body>
+</html>
